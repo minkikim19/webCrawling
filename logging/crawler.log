@@ -1,0 +1,18 @@
+[ERROR] 2021-05-14 05:45:36,688 __main__ logging_samle.py:37 page not found (logging_example)
+[ERROR] 2021-05-14 05:45:36,720 __main__ logging_samle.py:42 Error during request: MissingSchema("Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?") (logging_example)
+Traceback (most recent call last):
+  File "/home/test/Desktop/backup/web/logging/logging_samle.py", line 40, in logging_example
+    r = requests.get('#invalid_url', timeout=1)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 519, in request
+    prep = self.prepare_request(req)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 452, in prepare_request
+    p.prepare(
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 313, in prepare
+    self.prepare_url(url, params)
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 387, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?
